@@ -6,7 +6,7 @@
     public interface IIntervalDictionary<TBound, TValue> : ICollection<IntervalValuePair<TBound, TValue>>
         where TBound : IComparable<TBound>, IEquatable<TBound>
     {
-        ICollection<Interval<TBound>> Intervals { get; }
+        ICollection<IInterval<TBound>> Intervals { get; }
         ICollection<TValue> Values { get; }
         TValue this[IInterval<TBound> interval] { get; set; }
         TValue this[TBound key] { get; set; }
