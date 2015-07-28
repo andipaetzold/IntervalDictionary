@@ -11,7 +11,7 @@
         where TBound : IComparable<TBound>, IEquatable<TBound>
     {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="IntervalValuePair{TKey,TValue}" /> structure with the specified
+        ///     Initializes a new instance of the <see cref="IntervalValuePair{TBound,TValue}" /> structure with the specified
         ///     interval and value.
         /// </summary>
         /// <param name="interval">The object defined in each interval/value pair.</param>
