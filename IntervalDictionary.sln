@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntervalDictionary", "IntervalDictionary\IntervalDictionary.csproj", "{BD3EC613-889D-4A34-921A-5C811675C81A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{8D9147AC-A2C2-45C3-85B5-ED91766D6B87}"
+EndProject
 Global
 	GlobalSection(CodealikeProperties) = postSolution
 		SolutionGuid = 55350707-2946-44ab-a0d8-f628f3404cef
@@ -18,6 +20,10 @@ Global
 		{BD3EC613-889D-4A34-921A-5C811675C81A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD3EC613-889D-4A34-921A-5C811675C81A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD3EC613-889D-4A34-921A-5C811675C81A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D9147AC-A2C2-45C3-85B5-ED91766D6B87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D9147AC-A2C2-45C3-85B5-ED91766D6B87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D9147AC-A2C2-45C3-85B5-ED91766D6B87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D9147AC-A2C2-45C3-85B5-ED91766D6B87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
