@@ -52,9 +52,9 @@
         {
             IInterval<int> interval = new Interval<int>(5, 15);
 
-            Assert.IsTrue(interval.CompareTo(20) < 0);
+            Assert.IsTrue(interval.CompareTo(20) > 0);
             Assert.IsTrue(interval.CompareTo(10) == 0);
-            Assert.IsTrue(interval.CompareTo(0) > 0);
+            Assert.IsTrue(interval.CompareTo(0) < 0);
         }
 
         #endregion

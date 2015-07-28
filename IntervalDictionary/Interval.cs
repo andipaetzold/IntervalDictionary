@@ -7,6 +7,16 @@ namespace IntervalDictionary
     {
         public Interval(TBound lowerBound, TBound upperBound)
         {
+            if (lowerBound == null)
+            {
+                throw new ArgumentNullException("lowerBound is null");
+            }
+
+            if (upperBound == null)
+            {
+                throw new ArgumentNullException("upperBound is null");
+            }
+
             // sort lower and upper bound
             if (lowerBound.CompareTo(upperBound) <= 0)
             {
@@ -25,22 +35,32 @@ namespace IntervalDictionary
 
         public bool Contains(TBound bound)
         {
-            throw new NotImplementedException();
+            return LowerBound.CompareTo(bound) <= 0 && UpperBound.CompareTo(bound) >= 0;
         }
 
         public bool Intersects(IInterval<TBound> other)
         {
-            throw new NotImplementedException();
+            return Contains(other.LowerBound) || other.Contains(LowerBound);
         }
 
         public int CompareTo(TBound other)
         {
-            throw new NotImplementedException();
+            if (other.CompareTo(LowerBound) < 0)
+            {
+                return -1;
+            }
+
+            if (other.CompareTo(UpperBound) > 0)
+            {
+                return 1;
+            }
+
+            return 0;
         }
 
         public bool Equals(IInterval<TBound> other)
         {
-            throw new NotImplementedException();
+            return LowerBound.Equals(other.LowerBound) && UpperBound.Equals(other.UpperBound);
         }
     }
 }
