@@ -33,9 +33,9 @@ namespace IntervalDictionary
         public TBound LowerBound { get; set; }
         public TBound UpperBound { get; set; }
 
-        public bool Contains(TBound bound)
+        public bool Contains(TBound key)
         {
-            return LowerBound.CompareTo(bound) <= 0 && UpperBound.CompareTo(bound) >= 0;
+            return LowerBound.CompareTo(key) <= 0 && UpperBound.CompareTo(key) >= 0;
         }
 
         public bool Intersects(IInterval<TBound> other)
