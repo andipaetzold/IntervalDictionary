@@ -2,9 +2,19 @@ namespace IntervalDictionary
 {
     using System;
 
+    /// <summary>
+    ///     Represents an interval between two bounds.
+    /// </summary>
+    /// <typeparam name="TBound">The type of the bounds.</typeparam>
     public class Interval<TBound> : IInterval<TBound>
         where TBound : IComparable<TBound>, IEquatable<TBound>
     {
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="Interval{TBound}" /> class with a lower and an upper bound.
+        /// </summary>
+        /// <param name="lowerBound">The initial lower bound of the interval.</param>
+        /// <param name="upperBound">The initial upper bound of the interval.</param>
+        /// <exception cref="ArgumentNullException">Lower or upper bound is null.</exception>
         public Interval(TBound lowerBound, TBound upperBound)
         {
             if (lowerBound == null)
@@ -30,14 +40,40 @@ namespace IntervalDictionary
             }
         }
 
+        /// <summary>
+        ///     Gets or sets the lower bound of the interval.
+        /// </summary>
         public TBound LowerBound { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the upper bound of the interval.
+        /// </summary>
         public TBound UpperBound { get; set; }
 
+        /// <summary>
+        ///     Determines whether <paramref name="key" /> is between <see cref="LowerBound" /> and <see cref="UpperBound" /> of
+        ///     the interval.
+        /// </summary>
+        /// <param name="key">
+        ///     The key to check the interval for.
+        /// </param>
+        /// <returns>
+        ///     true if key is between <see cref="LowerBound" /> and <see cref="UpperBound" />; otherwise, false.
+        /// </returns>
         public bool Contains(TBound key)
         {
             return LowerBound.CompareTo(key) <= 0 && UpperBound.CompareTo(key) >= 0;
         }
 
+        /// <summary>
+        ///     Determines whether the interval intersects with an other interval.
+        /// </summary>
+        /// <param name="other">
+        ///     The interval to check for intersection with the current interval.
+        /// </param>
+        /// <returns>
+        ///     true if the interval intersects with an other interval; otherwise, false.
+        /// </returns>
         public bool Intersects(IInterval<TBound> other)
         {
             return Contains(other.LowerBound) || other.Contains(LowerBound);

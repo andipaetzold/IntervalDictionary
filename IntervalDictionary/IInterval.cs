@@ -29,7 +29,7 @@
         ///     The key to check the interval for.
         /// </param>
         /// <returns>
-        ///     <c>true</c> if key is between <see cref="LowerBound" /> and <see cref="UpperBound" />; otherwise <c>false</c>
+        ///     true if key is between <see cref="LowerBound" /> and <see cref="UpperBound" />; otherwise, false.
         /// </returns>
         bool Contains(TBound key);
 
@@ -40,7 +40,7 @@
         ///     The interval to check for intersection with the current interval.
         /// </param>
         /// <returns>
-        ///     <c>true</c> if the interval intersects with an other interval; otherwise <c>false</c>.
+        ///     true if the interval intersects with an other interval; otherwise, false.
         /// </returns>
         bool Intersects(IInterval<TBound> other);
     }
