@@ -110,6 +110,7 @@
         [ExpectedException(typeof(ArgumentNullException))]
         public void ConstructorNullException1()
         {
+            // ReSharper disable once UnusedVariable
             IInterval<string> interval = new Interval<string>("a", null);
         }
 
@@ -117,6 +118,7 @@
         [ExpectedException(typeof(ArgumentNullException))]
         public void ConstructorNullException2()
         {
+            // ReSharper disable once UnusedVariable
             IInterval<string> interval = new Interval<string>(null, "b");
         }
 
