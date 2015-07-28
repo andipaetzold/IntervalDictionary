@@ -74,6 +74,18 @@
 
         #endregion
 
+        #region ToString
+
+        [TestMethod]
+        public void String()
+        {
+            IInterval<int> interval = new Interval<int>(5, 10);
+
+            Assert.AreEqual("[5, 10]", interval.ToString());
+        }
+
+        #endregion
+
         #region Constructor
 
         [TestMethod]
