@@ -62,5 +62,10 @@ namespace IntervalDictionary
         {
             return LowerBound.Equals(other.LowerBound) && UpperBound.Equals(other.UpperBound);
         }
+
+        public override string ToString()
+        {
+            return string.Format("[{0}, {1}]", LowerBound, UpperBound);
+        }
     }
 }
