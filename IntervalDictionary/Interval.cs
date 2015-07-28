@@ -9,12 +9,12 @@ namespace IntervalDictionary
         {
             if (lowerBound == null)
             {
-                throw new ArgumentNullException("lowerBound is null");
+                throw new ArgumentNullException("lowerBound", "lowerBound is null");
             }
 
             if (upperBound == null)
             {
-                throw new ArgumentNullException("upperBound is null");
+                throw new ArgumentNullException("upperBound", "upperBound is null");
             }
 
             // sort lower and upper bound
