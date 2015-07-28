@@ -45,6 +45,35 @@
 
         #endregion
 
+        #region CompareTo
+
+        [TestMethod]
+        public void CompareTo()
+        {
+            IInterval<int> interval = new Interval<int>(5, 15);
+
+            Assert.IsTrue(interval.CompareTo(20) < 0);
+            Assert.IsTrue(interval.CompareTo(10) == 0);
+            Assert.IsTrue(interval.CompareTo(0) > 0);
+        }
+
+        #endregion
+
+        #region Equals
+
+        [TestMethod]
+        public void Equals()
+        {
+            IInterval<int> interval1 = new Interval<int>(5, 15);
+            IInterval<int> interval2 = new Interval<int>(5, 15);
+            IInterval<int> interval3 = new Interval<int>(5, 20);
+
+            Assert.IsTrue(interval1.Equals(interval2));
+            Assert.IsFalse(interval1.Equals(interval3));
+        }
+
+        #endregion
+
         #region Constructor
 
         [TestMethod]

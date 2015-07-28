@@ -3,7 +3,6 @@
     using System;
 
     public interface IInterval<TBound> : IComparable<TBound>, 
-                                         IComparable<IInterval<TBound>>, 
                                          IEquatable<IInterval<TBound>>
         where TBound : IComparable<TBound>, IEquatable<TBound>
     {

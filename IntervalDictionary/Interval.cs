@@ -7,7 +7,17 @@ namespace IntervalDictionary
     {
         public Interval(TBound lowerBound, TBound upperBound)
         {
-            throw new NotImplementedException();
+            // sort lower and upper bound
+            if (lowerBound.CompareTo(upperBound) <= 0)
+            {
+                LowerBound = lowerBound;
+                UpperBound = upperBound;
+            }
+            else
+            {
+                LowerBound = upperBound;
+                UpperBound = lowerBound;
+            }
         }
 
         public TBound LowerBound { get; set; }
@@ -24,11 +34,6 @@ namespace IntervalDictionary
         }
 
         public int CompareTo(TBound other)
-        {
-            throw new NotImplementedException();
-        }
-
-        public int CompareTo(IInterval<TBound> other)
         {
             throw new NotImplementedException();
         }
