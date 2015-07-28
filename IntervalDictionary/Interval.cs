@@ -15,11 +15,6 @@ namespace IntervalDictionary
             throw new NotImplementedException();
         }
 
-        public int CompareTo(TBound other)
-        {
-            throw new NotImplementedException();
-        }
-
         public TBound LowerBound { get; set; }
         public TBound UpperBound { get; set; }
 
@@ -54,6 +49,21 @@ namespace IntervalDictionary
         }
 
         public IInterval<TBound> Subtract(IInterval<TBound> other)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int CompareTo(TBound other)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int CompareTo(IInterval<TBound> other)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Equals(IInterval<TBound> other)
         {
             throw new NotImplementedException();
         }
