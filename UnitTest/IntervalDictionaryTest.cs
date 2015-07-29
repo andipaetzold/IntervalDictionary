@@ -512,7 +512,7 @@
             Assert.IsTrue(intervalDictionary.ContainsInterval(new Interval<int>(5, 10)));
             Assert.IsTrue(intervalDictionary.ContainsInterval(new Interval<int>(17, 18)));
             Assert.IsTrue(intervalDictionary.ContainsInterval(new Interval<int>(25, 25)));
-            Assert.IsTrue(intervalDictionary.ContainsInterval(new Interval<int>(17, 25)));
+            Assert.IsFalse(intervalDictionary.ContainsInterval(new Interval<int>(17, 25)));
         }
 
         [TestMethod]

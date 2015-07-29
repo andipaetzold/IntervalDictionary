@@ -122,7 +122,7 @@
                 throw new ArgumentNullException("interval", "interval is null");
             }
 
-            return intervalValuePairs.Any(pair => pair.Interval.Equals(interval));
+            return intervalValuePairs.Any(pair => pair.Interval.IsSupersetOf(interval));
         }
 
         public bool ContainsKey(TBound key)
