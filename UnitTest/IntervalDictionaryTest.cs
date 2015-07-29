@@ -63,16 +63,16 @@
             var intervalDictionary = new IntervalDictionary<string, string>
                                          {
                                              {
-                                                 new Interval<string>("5", "10"), 
-                                                 "5 - 10"
+                                                 new Interval<string>("a", "c"), 
+                                                 "a - c"
                                              }, 
                                              {
-                                                 new Interval<string>("15", "20"), 
-                                                 "15 - 20"
+                                                 new Interval<string>("h", "j"), 
+                                                 "h - j"
                                              }, 
                                              {
-                                                 new Interval<string>("25", "25"), 
-                                                 "25 - 25"
+                                                 new Interval<string>("x", "z"), 
+                                                 "x - z"
                                              }
                                          };
 

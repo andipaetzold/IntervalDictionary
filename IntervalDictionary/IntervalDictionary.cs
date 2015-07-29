@@ -157,6 +157,11 @@
 
         public bool Remove(TBound key)
         {
+            if (key == null)
+            {
+                throw new ArgumentNullException("key", "key is null");
+            }
+
             throw new NotImplementedException();
         }
 
