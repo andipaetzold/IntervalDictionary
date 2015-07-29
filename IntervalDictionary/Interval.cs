@@ -79,6 +79,16 @@ namespace IntervalDictionary
             return Contains(other.LowerBound) || other.Contains(LowerBound);
         }
 
+        public bool IsSubsetOf(IInterval<TBound> other)
+        {
+            return other.Contains(LowerBound) && other.Contains(UpperBound);
+        }
+
+        public bool IsSupersetOf(IInterval<TBound> other)
+        {
+            return Contains(other.LowerBound) && Contains(other.UpperBound);
+        }
+
         public int CompareTo(TBound other)
         {
             if (other.CompareTo(LowerBound) < 0)

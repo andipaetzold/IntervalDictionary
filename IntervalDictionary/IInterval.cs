@@ -43,5 +43,19 @@
         ///     true if the interval intersects with an other interval; otherwise, false.
         /// </returns>
         bool Intersects(IInterval<TBound> other);
+
+        /// <summary>
+        ///     Determines whether the interval is a subset of an other interval.
+        /// </summary>
+        /// <param name="other">The other interval.</param>
+        /// <returns>true if the interval is a subset of an other interval; otherwise, false.</returns>
+        bool IsSubsetOf(IInterval<TBound> other);
+
+        /// <summary>
+        ///     Determines whether the interval is a superset of an other interval.
+        /// </summary>
+        /// <param name="other">The other interval</param>
+        /// <returns>true if the interval is a superset of an other interval; otherwise, false.</returns>
+        bool IsSupersetOf(IInterval<TBound> other);
     }
 }
