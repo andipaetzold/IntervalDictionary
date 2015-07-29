@@ -98,7 +98,7 @@
         #region Add
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
+        [ExpectedException(typeof(ArgumentException))]
         public void AddArgumentException()
         {
             // ReSharper disable once UnusedVariable
@@ -118,7 +118,7 @@
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
+        [ExpectedException(typeof(ArgumentNullException))]
         public void AddArgumentNullException2()
         {
             // ReSharper disable once UnusedVariable
