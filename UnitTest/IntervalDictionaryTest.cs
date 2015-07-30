@@ -1,10 +1,10 @@
-﻿namespace UnitTest
+﻿namespace Paetzold.Collections.IntervalDictionary.UnitTest
 {
     using System;
     using System.Collections;
     using System.Collections.Generic;
-    using IntervalDictionary;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using Paetzold.Collections.IntervalDictionary;
 
     [TestClass]
     public class IntervalDictionaryTest

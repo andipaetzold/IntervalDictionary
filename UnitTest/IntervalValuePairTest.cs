@@ -1,7 +1,7 @@
-﻿namespace UnitTest
+﻿namespace Paetzold.Collections.IntervalDictionary.UnitTest
 {
-    using IntervalDictionary;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using Paetzold.Collections.IntervalDictionary;
 
     [TestClass]
     public class IntervalValuePairTest

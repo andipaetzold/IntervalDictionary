@@ -1,4 +1,4 @@
-﻿namespace IntervalDictionary
+﻿namespace Paetzold.Collections.IntervalDictionary
 {
     using System;
 
