@@ -1,6 +1,7 @@
 ﻿namespace UnitTest
 {
     using System;
+    using System.Collections;
     using System.Collections.Generic;
     using IntervalDictionary;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -45,6 +46,27 @@
             intervalDictionary.Add(intervalValuePair3);
 
             foreach (var pair in intervalDictionary)
+            {
+                Assert.IsTrue(
+                    pair.Equals(intervalValuePair1) || pair.Equals(intervalValuePair2)
+                    || pair.Equals(intervalValuePair3));
+            }
+        }
+
+        [TestMethod]
+        public void IEnumerableGetEnumerator()
+        {
+            var intervalDictionary = new IntervalDictionary<int, string>();
+
+            var intervalValuePair1 = new IntervalValuePair<int, string>(new Interval<int>(5, 10), "5 - 10");
+            var intervalValuePair2 = new IntervalValuePair<int, string>(new Interval<int>(15, 20), "15 - 20");
+            var intervalValuePair3 = new IntervalValuePair<int, string>(new Interval<int>(25, 25), "25 - 25");
+
+            intervalDictionary.Add(intervalValuePair1);
+            intervalDictionary.Add(intervalValuePair2);
+            intervalDictionary.Add(intervalValuePair3);
+
+            foreach (var pair in (IEnumerable)intervalDictionary)
             {
                 Assert.IsTrue(
                     pair.Equals(intervalValuePair1) || pair.Equals(intervalValuePair2)
