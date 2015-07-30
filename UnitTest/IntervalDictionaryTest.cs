@@ -121,13 +121,25 @@
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
-        public void AddArgumentException()
+        public void AddArgumentException1()
         {
             // ReSharper disable once UnusedVariable
             var intervalDictionary = new IntervalDictionary<int, string>
                                          {
                                              { new Interval<int>(5, 10), "5 - 10" }, 
                                              { new Interval<int>(7, 15), "7 - 15" }
+                                         };
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void AddArgumentException2()
+        {
+            // ReSharper disable once UnusedVariable
+            var intervalDictionary = new IntervalDictionary<int, string>
+                                         {
+                                             { new Interval<int>(5, 10), "5 - 10" }, 
+                                             { new Interval<int>(7, 9), "7 - 9" }
                                          };
         }
 
