@@ -26,12 +26,12 @@
         /// <summary>
         ///     Gets the interval in the interval/value pair.
         /// </summary>
-        public IInterval<TBound> Interval { get; private set; }
+        public IInterval<TBound> Interval { get; }
 
         /// <summary>
         ///     Gets the value in the interval/value pair.
         /// </summary>
-        public TValue Value { get; private set; }
+        public TValue Value { get; }
 
         /// <summary>
         ///     Returns a string representation of the <see cref="IntervalValuePair{TKey,TValue}" />, using the string
@@ -42,9 +42,6 @@
         ///     representations of the interval and value.
         /// </returns>
         /// <filterpriority>2</filterpriority>
-        public override string ToString()
-        {
-            return string.Format("{0}: {1}", Interval, Value);
-        }
+        public override string ToString() => $"{Interval}: {Value}";
     }
 }

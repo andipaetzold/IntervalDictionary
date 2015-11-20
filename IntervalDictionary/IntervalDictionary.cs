@@ -49,12 +49,12 @@
         {
             if (array == null)
             {
-                throw new ArgumentNullException("array", "array is null");
+                throw new ArgumentNullException(nameof(array));
             }
 
             if (arrayIndex < 0)
             {
-                throw new ArgumentOutOfRangeException("arrayIndex", "arrayIndex is less than zero.");
+                throw new ArgumentOutOfRangeException(nameof(arrayIndex));
             }
 
             foreach (var pair in intervalValuePairs)
@@ -68,15 +68,8 @@
             throw new NotImplementedException();
         }
 
-        public int Count
-        {
-            get { return intervalValuePairs.Count; }
-        }
-
-        public bool IsReadOnly
-        {
-            get { return false; }
-        }
+        public int Count => intervalValuePairs.Count;
+        public bool IsReadOnly => false;
 
         public ICollection<IInterval<TBound>> Intervals
         {
@@ -104,12 +97,12 @@
         {
             if (interval == null)
             {
-                throw new ArgumentNullException("interval", "interval is null");
+                throw new ArgumentNullException(nameof(interval));
             }
 
             if (value == null)
             {
-                throw new ArgumentNullException("value", "value is null");
+                throw new ArgumentNullException(nameof(value));
             }
 
             Add(new IntervalValuePair<TBound, TValue>(interval, value));
@@ -119,7 +112,7 @@
         {
             if (interval == null)
             {
-                throw new ArgumentNullException("interval", "interval is null");
+                throw new ArgumentNullException(nameof(interval));
             }
 
             return intervalValuePairs.Any(pair => pair.Interval.IsSupersetOf(interval));
@@ -129,7 +122,7 @@
         {
             if (key == null)
             {
-                throw new ArgumentNullException("key", "value is null");
+                throw new ArgumentNullException(nameof(key));
             }
 
             return intervalValuePairs.Any(pair => pair.Interval.Contains(key));
@@ -139,7 +132,7 @@
         {
             if (value == null)
             {
-                throw new ArgumentNullException("value", "value is null");
+                throw new ArgumentNullException(nameof(value));
             }
 
             return intervalValuePairs.Any(pair => pair.Value.Equals(value));
@@ -149,7 +142,7 @@
         {
             if (interval == null)
             {
-                throw new ArgumentNullException("interval", "interval is null");
+                throw new ArgumentNullException(nameof(interval));
             }
 
             throw new NotImplementedException();
@@ -159,7 +152,7 @@
         {
             if (key == null)
             {
-                throw new ArgumentNullException("key", "key is null");
+                throw new ArgumentNullException(nameof(key));
             }
 
             throw new NotImplementedException();
@@ -191,7 +184,7 @@
         {
             if (interval == null)
             {
-                throw new ArgumentNullException("interval", "interval is null");
+                throw new ArgumentNullException(nameof(interval));
             }
 
             value = default(TValue);
@@ -209,7 +202,7 @@
         {
             if (key == null)
             {
-                throw new ArgumentNullException("key", "key is null");
+                throw new ArgumentNullException(nameof(key));
             }
 
             value = default(TValue);

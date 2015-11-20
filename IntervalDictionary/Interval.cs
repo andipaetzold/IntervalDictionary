@@ -19,12 +19,12 @@ namespace Paetzold.Collections.IntervalDictionary
         {
             if (lowerBound == null)
             {
-                throw new ArgumentNullException("lowerBound", "lowerBound is null");
+                throw new ArgumentNullException(nameof(lowerBound));
             }
 
             if (upperBound == null)
             {
-                throw new ArgumentNullException("upperBound", "upperBound is null");
+                throw new ArgumentNullException(nameof(upperBound));
             }
 
             // sort lower and upper bound
@@ -109,9 +109,6 @@ namespace Paetzold.Collections.IntervalDictionary
             return LowerBound.Equals(other.LowerBound) && UpperBound.Equals(other.UpperBound);
         }
 
-        public override string ToString()
-        {
-            return string.Format("[{0}, {1}]", LowerBound, UpperBound);
-        }
+        public override string ToString() => $"[{LowerBound}, {UpperBound}]";
     }
 }

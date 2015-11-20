@@ -4,7 +4,6 @@
     using System.Collections;
     using System.Collections.Generic;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using Paetzold.Collections.IntervalDictionary;
 
     [TestClass]
     public class IntervalDictionaryTest
@@ -16,8 +15,8 @@
         {
             var intervalDictionary = new IntervalDictionary<int, string>
                                          {
-                                             { new Interval<int>(5, 10), "5 - 10" }, 
-                                             { new Interval<int>(15, 20), "15 - 20" }, 
+                                             { new Interval<int>(5, 10), "5 - 10" },
+                                             { new Interval<int>(15, 20), "15 - 20" },
                                              { new Interval<int>(25, 25), "25 - 25" }
                                          };
 
@@ -85,15 +84,15 @@
             var intervalDictionary = new IntervalDictionary<string, string>
                                          {
                                              {
-                                                 new Interval<string>("a", "c"), 
+                                                 new Interval<string>("a", "c"),
                                                  "a - c"
-                                             }, 
+                                             },
                                              {
-                                                 new Interval<string>("h", "j"), 
+                                                 new Interval<string>("h", "j"),
                                                  "h - j"
-                                             }, 
+                                             },
                                              {
-                                                 new Interval<string>("x", "z"), 
+                                                 new Interval<string>("x", "z"),
                                                  "x - z"
                                              }
                                          };
@@ -107,8 +106,8 @@
         {
             var intervalDictionary = new IntervalDictionary<int, string>
                                          {
-                                             { new Interval<int>(5, 10), "5 - 10" }, 
-                                             { new Interval<int>(15, 20), "15 - 20" }, 
+                                             { new Interval<int>(5, 10), "5 - 10" },
+                                             { new Interval<int>(15, 20), "15 - 20" },
                                              { new Interval<int>(25, 25), "25 - 25" }
                                          };
 
@@ -126,7 +125,7 @@
             // ReSharper disable once UnusedVariable
             var intervalDictionary = new IntervalDictionary<int, string>
                                          {
-                                             { new Interval<int>(5, 10), "5 - 10" }, 
+                                             { new Interval<int>(5, 10), "5 - 10" },
                                              { new Interval<int>(7, 15), "7 - 15" }
                                          };
         }
@@ -138,7 +137,7 @@
             // ReSharper disable once UnusedVariable
             var intervalDictionary = new IntervalDictionary<int, string>
                                          {
-                                             { new Interval<int>(5, 10), "5 - 10" }, 
+                                             { new Interval<int>(5, 10), "5 - 10" },
                                              { new Interval<int>(7, 9), "7 - 9" }
                                          };
         }
@@ -174,7 +173,7 @@
             intervalDictionary.Add(new Interval<int>(15, 20), "15 - 20");
             intervalDictionary.Add(new Interval<int>(25, 25), "25 - 25");
 
-            Assert.AreEqual(5, intervalDictionary.Count);
+            Assert.AreEqual(3, intervalDictionary.Count);
 
             intervalDictionary.Remove(new Interval<int>(15, 20));
 
@@ -194,8 +193,8 @@
         {
             var intervalDictionary = new IntervalDictionary<int, string>
                                          {
-                                             { new Interval<int>(5, 10), "5 - 10" }, 
-                                             { new Interval<int>(15, 20), "15 - 20" }, 
+                                             { new Interval<int>(5, 10), "5 - 10" },
+                                             { new Interval<int>(15, 20), "15 - 20" },
                                              { new Interval<int>(25, 25), "25 - 25" }
                                          };
 
@@ -211,8 +210,8 @@
         {
             var intervalDictionary = new IntervalDictionary<int, string>
                                          {
-                                             { new Interval<int>(5, 10), "5 - 10" }, 
-                                             { new Interval<int>(15, 20), "15 - 20" }, 
+                                             { new Interval<int>(5, 10), "5 - 10" },
+                                             { new Interval<int>(15, 20), "15 - 20" },
                                              { new Interval<int>(25, 25), "25 - 25" }
                                          };
 
@@ -295,8 +294,8 @@
         {
             var intervalDictionary = new IntervalDictionary<int, string>
                                          {
-                                             { new Interval<int>(5, 10), "5 - 10" }, 
-                                             { new Interval<int>(15, 20), "15 - 20" }, 
+                                             { new Interval<int>(5, 10), "5 - 10" },
+                                             { new Interval<int>(15, 20), "15 - 20" },
                                              { new Interval<int>(25, 25), "25 - 25" }
                                          };
 
@@ -319,8 +318,8 @@
         {
             var intervalDictionary = new IntervalDictionary<int, string>
                                          {
-                                             { new Interval<int>(5, 10), "5 - 10" }, 
-                                             { new Interval<int>(15, 20), "15 - 20" }, 
+                                             { new Interval<int>(5, 10), "5 - 10" },
+                                             { new Interval<int>(15, 20), "15 - 20" },
                                              { new Interval<int>(25, 25), "25 - 25" }
                                          };
 
@@ -351,8 +350,8 @@
         {
             var intervalDictionary = new IntervalDictionary<int, string>
                                          {
-                                             { new Interval<int>(5, 10), "5 - 10" }, 
-                                             { new Interval<int>(15, 20), "15 - 20" }, 
+                                             { new Interval<int>(5, 10), "5 - 10" },
+                                             { new Interval<int>(15, 20), "15 - 20" },
                                              { new Interval<int>(25, 25), "25 - 25" }
                                          };
 
@@ -365,8 +364,8 @@
         {
             var intervalDictionary = new IntervalDictionary<int, string>
                                          {
-                                             { new Interval<int>(5, 10), "5 - 10" }, 
-                                             { new Interval<int>(15, 20), "15 - 20" }, 
+                                             { new Interval<int>(5, 10), "5 - 10" },
+                                             { new Interval<int>(15, 20), "15 - 20" },
                                              { new Interval<int>(25, 25), "25 - 25" }
                                          };
 
@@ -378,8 +377,8 @@
         {
             var intervalDictionary = new IntervalDictionary<int, string>
                                          {
-                                             { new Interval<int>(5, 10), "5 - 10" }, 
-                                             { new Interval<int>(15, 20), "15 - 20" }, 
+                                             { new Interval<int>(5, 10), "5 - 10" },
+                                             { new Interval<int>(15, 20), "15 - 20" },
                                              { new Interval<int>(25, 25), "25 - 25" }
                                          };
 
@@ -396,8 +395,8 @@
         {
             var intervalDictionary = new IntervalDictionary<int, string>
                                          {
-                                             { new Interval<int>(5, 10), "5 - 10" }, 
-                                             { new Interval<int>(15, 20), "15 - 20" }, 
+                                             { new Interval<int>(5, 10), "5 - 10" },
+                                             { new Interval<int>(15, 20), "15 - 20" },
                                              { new Interval<int>(25, 25), "25 - 25" }
                                          };
 
@@ -409,8 +408,8 @@
         {
             var intervalDictionary = new IntervalDictionary<int, string>
                                          {
-                                             { new Interval<int>(5, 10), "5 - 10" }, 
-                                             { new Interval<int>(15, 20), "15 - 20" }, 
+                                             { new Interval<int>(5, 10), "5 - 10" },
+                                             { new Interval<int>(15, 20), "15 - 20" },
                                              { new Interval<int>(25, 25), "25 - 25" }
                                          };
 
@@ -425,8 +424,8 @@
         {
             var intervalDictionary = new IntervalDictionary<int, string>
                                          {
-                                             { new Interval<int>(5, 10), "5 - 10" }, 
-                                             { new Interval<int>(15, 20), "15 - 20" }, 
+                                             { new Interval<int>(5, 10), "5 - 10" },
+                                             { new Interval<int>(15, 20), "15 - 20" },
                                              { new Interval<int>(25, 25), "25 - 25" }
                                          };
 
@@ -438,8 +437,8 @@
         {
             var intervalDictionary = new IntervalDictionary<int, string>
                                          {
-                                             { new Interval<int>(5, 10), "5 - 10" }, 
-                                             { new Interval<int>(15, 20), "15 - 20" }, 
+                                             { new Interval<int>(5, 10), "5 - 10" },
+                                             { new Interval<int>(15, 20), "15 - 20" },
                                              { new Interval<int>(25, 25), "25 - 25" }
                                          };
 
@@ -457,15 +456,15 @@
             var intervalDictionary = new IntervalDictionary<string, string>
                                          {
                                              {
-                                                 new Interval<string>("a", "c"), 
+                                                 new Interval<string>("a", "c"),
                                                  "a - c"
-                                             }, 
+                                             },
                                              {
-                                                 new Interval<string>("h", "j"), 
+                                                 new Interval<string>("h", "j"),
                                                  "h - j"
-                                             }, 
+                                             },
                                              {
-                                                 new Interval<string>("x", "z"), 
+                                                 new Interval<string>("x", "z"),
                                                  "x - z"
                                              }
                                          };
@@ -499,8 +498,8 @@
         {
             var intervalDictionary = new IntervalDictionary<int, string>
                                          {
-                                             { new Interval<int>(5, 10), "5 - 10" }, 
-                                             { new Interval<int>(15, 20), "15 - 20" }, 
+                                             { new Interval<int>(5, 10), "5 - 10" },
+                                             { new Interval<int>(15, 20), "15 - 20" },
                                              { new Interval<int>(25, 25), "25 - 25" }
                                          };
 
@@ -517,15 +516,15 @@
             var intervalDictionary = new IntervalDictionary<string, string>
                                          {
                                              {
-                                                 new Interval<string>("a", "c"), 
+                                                 new Interval<string>("a", "c"),
                                                  "a - c"
-                                             }, 
+                                             },
                                              {
-                                                 new Interval<string>("h", "j"), 
+                                                 new Interval<string>("h", "j"),
                                                  "h - j"
-                                             }, 
+                                             },
                                              {
-                                                 new Interval<string>("x", "z"), 
+                                                 new Interval<string>("x", "z"),
                                                  "x - z"
                                              }
                                          };
@@ -538,8 +537,8 @@
         {
             var intervalDictionary = new IntervalDictionary<int, string>
                                          {
-                                             { new Interval<int>(5, 10), "5 - 10" }, 
-                                             { new Interval<int>(15, 20), "15 - 20" }, 
+                                             { new Interval<int>(5, 10), "5 - 10" },
+                                             { new Interval<int>(15, 20), "15 - 20" },
                                              { new Interval<int>(25, 25), "25 - 25" }
                                          };
 
@@ -555,8 +554,8 @@
         {
             var intervalDictionary = new IntervalDictionary<int, string>
                                          {
-                                             { new Interval<int>(5, 10), "5 - 10" }, 
-                                             { new Interval<int>(15, 20), "15 - 20" }, 
+                                             { new Interval<int>(5, 10), "5 - 10" },
+                                             { new Interval<int>(15, 20), "15 - 20" },
                                              { new Interval<int>(25, 25), "25 - 25" }
                                          };
 
@@ -568,8 +567,8 @@
         {
             var intervalDictionary = new IntervalDictionary<int, string>
                                          {
-                                             { new Interval<int>(5, 10), "5 - 10" }, 
-                                             { new Interval<int>(15, 20), "15 - 20" }, 
+                                             { new Interval<int>(5, 10), "5 - 10" },
+                                             { new Interval<int>(15, 20), "15 - 20" },
                                              { new Interval<int>(25, 25), "25 - 25" }
                                          };
 
@@ -583,8 +582,8 @@
         {
             var intervalDictionary = new IntervalDictionary<int, string>
                                          {
-                                             { new Interval<int>(5, 10), "5 - 10" }, 
-                                             { new Interval<int>(15, 20), "15 - 20" }, 
+                                             { new Interval<int>(5, 10), "5 - 10" },
+                                             { new Interval<int>(15, 20), "15 - 20" },
                                              { new Interval<int>(25, 25), "25 - 25" }
                                          };
 
